@@ -1,2 +1,4 @@
 # XeroToCrmIntegration
 This is an integration application for Xero Accounting To CRM for both ways.
+It has beend developed by Node js for AWS Lamba using Serverless Framework. 
+
