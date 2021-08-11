@@ -1,0 +1,32 @@
+{
+    "Table":{
+        "TableName":"TblCrmWithXeroTaxMapping",
+        "KeySchema":[
+            {
+                "AttributeName": "UserId",
+                "KeyType": "HASH"
+		    }, 
+            {
+                "AttributeName": "CombinedSortKey",
+                "KeyType": "RANGE"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "UserId",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "CombinedSortKey",
+                "AttributeType": "S"
+		    }
+        ],      
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits":1,
+            "WriteCapacityUnits":1
+        }
+    }
+   
+}
+    
+

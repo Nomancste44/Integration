@@ -1,0 +1,38 @@
+fetchZohoMappingFields:
+  handler: lib/endpoints/zoho/mapping-fields/fetch-mapping-fields.fetchZohoMappingFields
+  events:
+    - httpApi:
+        method: POST
+        path: /zoho/fetchZohoMappingFields/{moduleName}
+        cors: true
+getZohoMappingFields:
+  handler: lib/endpoints/zoho/mapping-fields/get-mapping-fields.getMappingFields
+  events:
+    - httpApi:
+        method: GET
+        path: /zoho/getZohoMappingFields/{moduleName}
+        cors: true
+
+updateZohoMappingFields:
+  handler: lib/endpoints/zoho/mapping-fields/update-mapping-fields.updateMappingFields
+  events:
+    - httpApi:
+        method: PUT
+        path: /zoho/updateZohoMappingFields/{moduleName}
+        cors: true
+
+setDefaultMapppingFields:
+  handler: lib/endpoints/zoho/mapping-fields/set-default-mappings.setDefaultMappings
+  events:
+    - httpApi:
+        method: Post
+        path: /zoho/setDefaultMappingFields/
+        cors: true
+
+getAvailableXeroFields:
+  handler: lib/endpoints/zoho/mapping-fields/get-available-xero-fields.getAvailableXeroFields
+  events:
+    - httpApi:
+        method: GET
+        path: /zoho/getAvailableXeroFields/{moduleName}
+        cors: true

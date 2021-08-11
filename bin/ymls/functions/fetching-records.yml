@@ -1,0 +1,15 @@
+fetchZohoRecords:
+  handler: lib/endpoints/zoho/fetching-records/fetch-crm-records.fetchZohoRecords
+  events:
+    - httpApi:
+        method: POST
+        path: /zoho/fetchZohoRecords/{moduleName}
+        cors: true
+
+fetchXeroRecords:
+  handler: lib/endpoints/xero/fetching-records/fetch-xero-records.fetchXeroRecords
+  events:
+    - httpApi:
+        method: POST
+        path: /xero/fetchXeroRecords/{moduleName}
+        cors: true

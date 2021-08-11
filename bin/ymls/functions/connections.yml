@@ -1,0 +1,27 @@
+hello:
+  handler: handler.hello
+  events:
+    - httpApi:
+        method: GET
+        path: /
+        cors: true
+
+authenticateZohoClient:
+  handler: lib/endpoints/zoho-xero-connections.getZohoClientAccess
+  events:
+    - httpApi:
+        method: POST
+        path: /connect/setZohoConnection
+        cors: true
+
+authenticateXeroClient:
+  handler: lib/endpoints/zoho-xero-connections.getXeroClientAccess
+  events:
+    - httpApi:
+        method: POST
+        path: /connect/setXeroConnection
+        cors: true
+
+
+           
+           

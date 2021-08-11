@@ -1,0 +1,162 @@
+Resources:
+  CrmFetchedAccountTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedAccount
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CrmAccountName
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CrmAccountName
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+
+  CrmFetchedVendorTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedVendor
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CrmVendorName
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CrmVendorName
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  CrmFetchedContactTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedContact
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: Email
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: Email
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  CrmFetchedProductTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedProduct
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CrmProductName
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CrmProductName
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  CrmFetchedPurchaseOrderTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedPurchaseOrder
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CrmFetchedPurchaseOrderId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CrmFetchedPurchaseOrderId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  CrmFetchedInvoiceTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmFetchedInvoice
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CrmFetchedInvoiceId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CrmFetchedInvoiceId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+
+  XeroContactsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblXeroContacts
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: XeroContactId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: XeroContactId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  XeroChartOfAccountsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblXeroChartOfAccounts
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: XeroChartOfAccountId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: XeroChartOfAccountId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  XeroBrandingThemesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblXeroBrandingThemes
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: XeroBrandingThemeId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: XeroBrandingThemeId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  XeroItemsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblXeroItems
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: XeroItemId
+          AttributeType: S	    
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: XeroItemId
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+  
+  

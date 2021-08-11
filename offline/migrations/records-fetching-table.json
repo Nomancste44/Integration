@@ -1,0 +1,277 @@
+{
+    "Table":[
+        {
+            "TableName":"TblCrmFetchedAccount",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "CrmAccountName",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "CrmAccountName",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblCrmFetchedVendor",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "CrmVendorName",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "CrmVendorName",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblCrmFetchedContact",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "Email",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "Email",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblCrmFetchedProduct",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "CrmProductName",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "CrmProductName",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblCrmFetchedPurchaseOrder",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "CrmFetchedPurchaseOrderId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "CrmFetchedPurchaseOrderId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblCrmFetchedInvoice",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "CrmFetchedInvoiceId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "CrmFetchedInvoiceId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblXeroContacts",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "XeroContactId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "XeroContactId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblXeroChartOfAccounts",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "XeroChartOfAccountId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "XeroChartOfAccountId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblXeroBrandingThemes",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "XeroBrandingThemeId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "XeroBrandingThemeId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        },
+        {
+            "TableName":"TblXeroItems",
+            "KeySchema":[
+                {
+                    "AttributeName": "UserId",
+                    "KeyType": "HASH"
+                }, 
+                {
+                    "AttributeName": "XeroItemId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "AttributeDefinitions": [
+                {
+                    "AttributeName": "UserId",
+                    "AttributeType": "S"
+                },
+                {
+                    "AttributeName": "XeroItemId",
+                    "AttributeType": "S"
+                }
+            ],      
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 20,
+                "WriteCapacityUnits": 20
+            }
+        }
+    ]
+   
+}
+    
+

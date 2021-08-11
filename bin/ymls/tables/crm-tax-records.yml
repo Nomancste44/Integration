@@ -1,0 +1,17 @@
+Resources:
+  CrmTaxRecords:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: TblCrmTaxRecords
+      AttributeDefinitions:
+        - AttributeName: UserId
+          AttributeType: S        
+        - AttributeName: CombinedSortKey
+          AttributeType: S
+
+      KeySchema:
+        - AttributeName: UserId
+          KeyType: HASH
+        - AttributeName: CombinedSortKey
+          KeyType: RANGE       
+      BillingMode: PAY_PER_REQUEST

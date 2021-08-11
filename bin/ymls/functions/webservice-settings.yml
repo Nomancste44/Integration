@@ -1,0 +1,20 @@
+addWebServiceSettings:
+    handler: lib/endpoints/zoho/web-service-settings/add-settings.addSetting    
+    events:
+      - httpApi:          
+          method: POST
+          path: /zoho/addSetting
+          cors: true
+
+getWebServiceSettings:
+    handler: lib/endpoints/zoho/web-service-settings/get-settings.getSetting    
+    events:
+      - httpApi:          
+          method: GET
+          path: /zoho/getSetting
+          cors: true
+
+
+
+           
+           

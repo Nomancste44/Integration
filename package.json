@@ -1,0 +1,27 @@
+{
+  "name": "xero2crm-integration-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "start": "./node_modules/.bin/serverless offline start -s dev",
+    "debug": "SET SLS_DEBUG=* && node --inspect C:\\\\Users\\Noman_Oscillosoft\\AppData\\Roaming\\npm\\node_modules\\serverless\\bin\\serverless offline start -s dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.923.0",
+    "axios": "^0.21.1",
+    "lambda-hooks": "^0.2.1",
+    "ramda": "^0.27.1",
+    "serverless-dynamodb-local": "^0.2.39",
+    "underscore": "^1.13.1",
+    "uuid": "^3.3.2",
+    "webpack": "^5.38.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "serverless-webpack": "^5.5.0"
+  }
+}

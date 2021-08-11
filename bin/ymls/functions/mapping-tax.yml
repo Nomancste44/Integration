@@ -1,0 +1,31 @@
+fetchXeroTaxRecords:
+  handler: lib/endpoints/xero/fetch-mapping-xero-tax.fetchXeroTaxRecords
+  events:
+    - httpApi:
+        method: POST
+        path: /xero/fetchXeroTaxRecords
+        cors: true
+
+getZohoMappingTax:
+  handler: lib/endpoints/zoho/mapping-fields/get-mapping-tax.getMappingTax
+  events:
+    - httpApi:
+        method: GET
+        path: /zoho/getZohoMappingTax
+        cors: true
+
+updateZohoMappingTax:
+  handler: lib/endpoints/zoho/mapping-fields/update-mapping-tax.updateMappingTax
+  events:
+    - httpApi:
+        method: PUT
+        path: /zoho/updateZohoMappingTax
+        cors: true
+
+fetchZohoTaxRecords:
+  handler: lib/endpoints/zoho/mapping-fields/fetch-mapping-tax.fetchZohoMappingTax
+  events:
+    - httpApi:
+        method: POST
+        path: /zoho/fetchZohoTaxRecords
+        cors: true

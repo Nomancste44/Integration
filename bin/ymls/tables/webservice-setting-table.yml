@@ -1,0 +1,17 @@
+Resources:
+  WebserviceSettingTable:
+      Type: AWS::DynamoDB::Table      
+      Properties:
+        TableName: WebServiceSettings
+        AttributeDefinitions:
+          - AttributeName: WebSerSettingId
+            AttributeType: S
+          - AttributeName: UserId
+            AttributeType: S         
+        KeySchema:
+          - AttributeName: WebSerSettingId
+            KeyType: HASH
+          - AttributeName: UserId
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+        

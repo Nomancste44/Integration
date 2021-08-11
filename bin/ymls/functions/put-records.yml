@@ -1,0 +1,15 @@
+insertXeroRecords:
+  handler: lib/endpoints/xero/put-records.insertXeroRecords
+  events:
+    - httpApi:
+        method: PUT
+        path: /xero/insertXeroRecords/{moduleName}
+        cors: true
+
+insertZohoRecords:
+  handler: lib/endpoints/zoho/put-records.insertZohoRecords
+  events:
+    - httpApi:
+        method: POST
+        path: /zoho/insertZohoRecords/{moduleName}
+        cors: true

@@ -1,0 +1,23 @@
+getAvailableXeroStatus:
+  handler: lib/endpoints/zoho/mapping-fields/get-available-xero-status.getAvailableXeroStatus
+  events:
+    - httpApi:
+        method: GET
+        path: /zoho/getAvailableXeroStatus
+        cors: true
+
+updateZohoMappingStatus:
+  handler: lib/endpoints/zoho/mapping-fields/update-mapping-status.updateMappingStatus
+  events:
+    - httpApi:
+        method: PUT
+        path: /zoho/updateZohoMappingStatus
+        cors: true
+
+getZohoMappingStatus:
+  handler: lib/endpoints/zoho/mapping-fields/get-mapping-status.getMappingStatus
+  events:
+    - httpApi:
+        method: GET
+        path: /zoho/getZohoMappingStatus/{moduleName}
+        cors: true

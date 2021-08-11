@@ -1,0 +1,24 @@
+{
+    "Table":{
+        "TableName":"TblUsers",
+        "KeySchema":[
+            {
+                "AttributeName":"UserId",
+                "KeyType":"HASH"
+            }
+        ],
+        "AttributeDefinitions":[
+            {
+                "AttributeName":"UserId",
+                "AttributeType":"S"
+            }
+        ],
+        "ProvisionedThroughput": {
+            "ReadCapacityUnits":1,
+            "WriteCapacityUnits":1
+        }
+    }
+   
+}
+    
+

@@ -1,0 +1,31 @@
+{
+    "Table": {
+        "TableName":"WebServiceSettings",
+        "KeySchema":[
+            {
+                "AttributeName": "WebSerSettingId",
+                "KeyType": "HASH"
+		    }, 
+            {
+                "AttributeName": "UserId",
+                "KeyType": "RANGE"
+            }
+        ],
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "WebSerSettingId",
+                "AttributeType": "S"
+            },
+            {
+                "AttributeName": "UserId",
+                "AttributeType": "S"
+		    }
+        ],
+        "ProvisionedThroughput":{
+            "ReadCapacityUnits":1,
+            "WriteCapacityUnits":1
+        }
+    }
+}
+    
+

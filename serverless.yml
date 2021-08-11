@@ -1,0 +1,67 @@
+service: xero2crm-integration-api
+
+plugins:
+  #- serverless-webpack
+  - serverless-offline
+  - serverless-dynamodb-local
+package:
+  individually: true
+custom:
+  userTable : TblUsers
+  webServiceSettings : webServiceSettings
+  crmWithXeroFieldsMapping : TblCrmWithXeroFieldsMapping
+  crmFetchedAccount: TblCrmFetchedAccount
+  crmFetchedVendor : TblCrmFetchedVendor
+  crmFetchedContact : TblCrmFetchedContact
+  crmFetchedProduct : TblCrmFetchedProduct
+  crmFetchedInvoice : TblCrmFetchedInvoice
+  TblCrmFetchedPurchaseOrder : TblCrmFetchedPurchaseOrder
+  xeroContacts : TblXeroContacts
+  xeroChartOfAccounts : TblXeroChartOfAccounts
+  xeroBrandingThemes : TblXeroBrandingThemes
+  xeroItems : TblXeroItems
+
+  dynamodb:
+        stages:
+            - dev
+        start:
+            port: 8000
+            inMemory: true
+            migrate: true
+        migration:
+            dir: offline/migrations
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  #profile: serverlessUser
+  region: eu-west-1
+  environment:
+      tableName: ${self:custom.userTable}
+  iamRoleStatements:
+      - Effect: Allow
+        Action:
+            - dynamodb:*
+        Resource: '*'
+
+functions: 
+  - ${file(bin/ymls/functions/connections.yml)}
+  - ${file(bin/ymls/functions/webservice-settings.yml)}
+  - ${file(bin/ymls/functions/mapping-fields.yml)}
+  - ${file(bin/ymls/functions/fetching-records.yml)}
+  - ${file(bin/ymls/functions/put-records.yml)}
+  - ${file(bin/ymls/functions/mapping-status.yml)}
+  - ${file(bin/ymls/functions/mapping-tax.yml)}
+resources: 
+  - ${file(bin/ymls/tables/users-table.yml)}
+  - ${file(bin/ymls/tables/webservice-setting-table.yml)}
+  - ${file(bin/ymls/tables/crm-with-xero-mapping-fields-table.yml)}
+  - ${file(bin/ymls/tables/records-fetching-table.yml)}
+  - ${file(bin/ymls/tables/crm-with-xero-mapping-status-table.yml)}
+  - ${file(bin/ymls/tables/crm-with-xero-mapping-tax-table.yml)}
+  - ${file(bin/ymls/tables/crm-tax-records.yml)}
+ 
+ 
